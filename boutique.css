@@ -279,11 +279,8 @@ body
 	{
 		grid-template-columns: 1fr;
 	}
-}
 
 /* Media query pour téléphones - Taille de texte augmentée pour meilleure lisibilité */
-@media (max-width: 600px)
-{
 	.pMenu
 	{
 		font-size: 1.8em;
