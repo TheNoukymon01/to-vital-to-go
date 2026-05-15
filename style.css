@@ -269,7 +269,7 @@ form h3
 	margin-left: 10%;
 }
 
-@media screen and (max-width: 900px) {
+@media (max-width: 1200px) {
 	.banner
 	{
 		height: auto;
@@ -391,10 +391,7 @@ form h3
 		width: 40%;
 		margin-left: 55%;
 	}
-}
-
-/* Media query pour téléphones - Taille de texte augmentée pour meilleure lisibilité */
-@media screen and (max-width: 600px) {
+	
 	.pMenu
 	{
 		font-size: 1.8em;
