@@ -1,0 +1,329 @@
+/* Boutique-specific styles reprenant la charte du site */
+*
+{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	background-color: #f3c6c6;
+	font-family: 'Ubuntu', sans-serif;
+	color: #3b2a2a;
+}
+
+/* Bannière / menu (copié pour correspondre aux autres pages) */
+.banner
+{
+	box-shadow: 0px 1px 5px black;
+	width: 100%;
+	height: 86px;
+	background-color: #e26b6b;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 100;
+}
+
+.iconBanner
+{
+	width: 80px;
+	height: 80px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.leadBanner
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 86px;
+	width: 40%;
+}
+
+.titleBanner
+{
+	position: static;
+	color: white;
+	margin: 0 10px;
+}
+
+.magR
+{
+	color: #da1e1b;
+}
+
+.magV
+{
+	color: #04ac04;
+}
+
+.menu
+{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100%;
+	margin-right: 20px;
+}
+
+.pMenu
+{
+	display: block;
+	width: 200px;
+	height: 100%;
+	text-align: center;
+	line-height: 85px;
+	color: white;
+	font-size: 1.6em;
+	background-color: #e26b6b;
+	border-radius: 10px;
+}
+
+.pMenu a
+{
+	color: white;
+	text-decoration: none;
+}
+
+.pMenu:hover
+{
+	background-color: #e49696;
+}
+
+/* Agencement de la boutique */
+.boutique
+{
+	max-width: 1200px;
+	margin: 120px auto 60px;
+	padding: 0 20px;
+}
+
+.recherche-boutique
+{
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin-bottom: 24px;
+}
+
+.champ-recherche
+{
+	width: 60%;
+	padding: 12px 14px;
+	border-radius: 30px;
+	border: 2px solid rgba(0,0,0,0.08);
+	font-size: 1rem;
+}
+
+.btn-recherche
+{
+	padding: 12px 18px;
+	border-radius: 30px;
+	background: #e26b6b;
+	color: #fff;
+	border: none;
+	font-weight: 700;
+	cursor: pointer;
+	box-shadow: 0 6px 14px rgba(226,107,107,0.14);
+}
+
+.btn-recherche:hover
+{
+	filter: brightness(1.05);
+	transform: translateY(-2px);
+}
+
+.grille-produits
+{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.carte-produit
+{
+	background: #fff;
+	border-radius: 10px;
+	padding: 12px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.carte-produit img
+{
+	width: 100%;
+	height: auto;
+	max-width: 260px;
+	border-radius: 6px;
+}
+
+.carte-produit h4
+{
+	margin: 12px 0 6px;
+	color: #4b2f2f;
+}
+
+.prix
+{
+	font-weight: 800;
+	color: #da1e1b;
+	margin: 6px 0;
+}
+
+.evaluation
+{
+	color: #f1c40f;
+	margin-bottom: 8px;
+}
+
+.btn-ajouter
+{
+	background: linear-gradient(135deg,#ffb3b3 0%, #e26b6b 100%);
+	color: #fff;
+	border: none;
+	padding: 10px 14px;
+	border-radius: 22px;
+	cursor: pointer;
+	font-weight: 700;
+	box-shadow: 0 6px 14px rgba(226,107,107,0.12);
+}
+
+.btn-ajouter:hover
+{
+	transform: translateY(-3px);
+	box-shadow: 0 10px 22px rgba(226,107,107,0.18);
+}
+
+@media (max-width: 900px)
+{
+	.banner
+	{
+		height: auto;
+		position: relative;
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	.leadBanner
+	{
+		width: 100%;
+		justify-content: center;
+	}
+
+	.menu
+	{
+		width: 100%;
+		margin-right: 0;
+		justify-content: center;
+		padding: 0 8px 8px;
+	}
+
+	.pMenu
+	{
+		width: calc(50% - 8px);
+		height: 56px;
+		line-height: 56px;
+		margin: 4px;
+		font-size: 1.9em;
+	}
+
+	.iconBanner
+	{
+		width: 64px;
+		height: 64px;
+	}
+
+	.titleBanner
+	{
+		font-size: 1.4em;
+	}
+
+	.boutique
+	{
+		margin-top: 20px;
+	}
+
+	.recherche-boutique
+	{
+		flex-direction: column;
+	}
+
+	.champ-recherche
+	{
+		width: 100%;
+		font-size: 1.1em;
+	}
+
+	.carte-produit h4
+	{
+		font-size: 1.1em;
+	}
+
+	.prix
+	{
+		font-size: 1.1em;
+	}
+
+	.grille-produits
+	{
+		grid-template-columns: 1fr;
+	}
+}
+
+/* Media query pour téléphones - Taille de texte augmentée pour meilleure lisibilité */
+@media (max-width: 600px)
+{
+	.pMenu
+	{
+		font-size: 1.8em;
+	}
+
+	.titleBanner
+	{
+		font-size: 1.9em;
+	}
+
+	.champ-recherche
+	{
+		font-size: 1.5em;
+		padding: 14px 16px;
+	}
+
+	.btn-recherche
+	{
+		font-size: 1.3em;
+		padding: 14px 20px;
+	}
+
+	.carte-produit h4
+	{
+		font-size: 1.6em;
+	}
+
+	.prix
+	{
+		font-size: 1.8em;
+	}
+
+	.evaluation
+	{
+		font-size: 1.5em;
+	}
+
+	.btn-ajouter
+	{
+		font-size: 1.3em;
+		padding: 12px 16px;
+	}
+}
